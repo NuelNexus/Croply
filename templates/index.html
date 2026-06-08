@@ -1,10 +1,84 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title> Croply</title>
-</head>
-<h1> Welcome to Croply</h1>
-    <p> A marektplace for farmers.</p>
-    <p>A Buying and Selling Platform</p>
-</head>
+  </html><title>Croply, Modern Agriculture Ecommerce Site</title>
+  <head><link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/style.css') }}"
+/></head>
+  <body>
+<main>
+  <div>
+    <span>Croply</span>
+    <h1>Agricutlture </h1>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
+    <hr>
+    <p>Explore our Market Place with a wide Range of resources, produce, etc to make farmers benefit from their crops and to make food access faster</p>
+    <a href="#">Sign Up/ Login</a>
+  </div>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-slide--one">
+        <div>
+          <h2>Equipment</h2>
+          <p>Browse Our Selection of equipments handpicked for you on our MarketPlace</p>
+          <a href="https://en.wikipedia.org/wiki/axe" target="_blank">explore</a>
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide--two">
+        <div>
+          <h2>Manure</h2>
+          <p>
+            Need fertilizer and are not sure what and which is good for your crops; Croply's got you
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Seahorse" target="_blank">explore</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide swiper-slide--three">
+
+        <div>
+          <h2>Crops</h2>
+          <p>
+            We have an assortment of a wide range of crops from every part of the world.
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Octopus" target="_blank">explore</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide swiper-slide--four">
+
+        <div>
+          <h2>Fruits</h2>
+          <p>
+            We got some fruits or smth Idk what to type to add here bruh
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Shark" target="_blank">explore</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide swiper-slide--five">
+
+        <div>
+          <h2>Produce</h2>
+          <p>
+            We got produce ranging from poultry to meat to whatever you desire
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Produce" target="_blank">explore</a>
+        </div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <img src="https://cdn.pixabay.com/photo/2021/11/04/19/39/jellyfish-6769173_960_720.png" alt="" class="bg">
+  <img src="https://cdn.pixabay.com/photo/2012/04/13/13/57/scallop-32506_960_720.png" alt="" class="bg2">
+</main>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
 </html>
