@@ -25,7 +25,7 @@ I also wanted to try and work on a project without the use of ai and also work o
 So thanks horizons for this oportunity because genuinely speaking I wouldnt even have time to do most of the work myself for no benefit and besides most of my software development is/ are for competitions here in Ghana. 
 
 ## Demo Video
-![Demo](images/Demo.gif)
+![Demo](images/Demo.mp4)
 
 ## Screenshots
 
