@@ -1,13 +1,9 @@
 # Croply
-<div align="center">
 
-<img src="images/banner.png" width="200">
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Flask](https://img.shields.io/badge/Flask-Web_App-black)
+![Status](https://img.shields.io/badge/Status-Active-green)
 
-# Croply
-
-Modern Agriculture E-Commerce Platform
-
-</div>
 
 Modern Agriculture E-commerce Platform
 ![Croply Banner](images/banner.png)
@@ -83,10 +79,4 @@ croply/
 ├── database/
 ├── app.py
 └── requirements.txt
-```
-
-```md
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-![Flask](https://img.shields.io/badge/Flask-Web_App-black)
-![Status](https://img.shields.io/badge/Status-Active-green)
 ```
