@@ -1,5 +1,16 @@
 # Croply
 
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Flask](https://img.shields.io/badge/Flask-Web_App-black)
+![Status](https://img.shields.io/badge/Status-Active-green)
+
+<p align="center">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" width="50">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50">
+</p>
+
 Modern Agriculture E-commerce Platform
 ![Croply Banner](images/banner.png)
 
@@ -13,7 +24,10 @@ Reason 2:
 I also wanted to try and work on a project without the use of ai and also work on my html and css because I am a lazy developer and just use templates but I somehow ended up using templates most of the time for the project. 
 So thanks horizons for this oportunity because genuinely speaking I wouldnt even have time to do most of the work myself for no benefit and besides most of my software development is/ are for competitions here in Ghana. 
 
-##Screenshots
+## Demo Video
+![Demo](images/Demo.gif)
+
+## Screenshots
 
 ### Home Page
 ![Home](images/Homepage.png)
@@ -75,4 +89,3 @@ croply/
 ├── app.py
 └── requirements.txt
 ```
-
