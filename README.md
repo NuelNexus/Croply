@@ -24,9 +24,6 @@ Reason 2:
 I also wanted to try and work on a project without the use of ai and also work on my html and css because I am a lazy developer and just use templates but I somehow ended up using templates most of the time for the project. 
 So thanks horizons for this oportunity because genuinely speaking I wouldnt even have time to do most of the work myself for no benefit and besides most of my software development is/ are for competitions here in Ghana. 
 
-## Demo Video
-![Demo](images/Demo.mp4)
-
 ## Screenshots
 
 ### Home Page
