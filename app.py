@@ -74,12 +74,31 @@ def signin():
         
         return "Invalid Login Details"
     return render_template("signin.html")
+
+@app.route("/profile")
+def profile():
+    if "user" not in session:
+        return redirect(url_for("signin"))
+    user = User.query.filter_by(email=session["user"]).first()
+    return render_template("profile.html", user=user)
+
+@app.route("/order")
+def order():
+    if "user" not in session:
+        return redirect(url_for("signin"))
+    user = User.query.filter_by(email=session["user"]).first()
+    return render_template("orders.html")
 @app.route("/logout")
 def logout():
     session.pop("user", None)
     return redirect(url_for("signin"))
 
-
+@app.route("/checkout")
+def chechout():
+    if "user" not in session:
+        return redirect(url_for("signin"))
+    user = User.query.filter_by(email=session["user"]).first()
+    return render_template("checkout.html")
 
 if __name__ == "__main__":
    app.run(debug=True)
