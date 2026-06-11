@@ -38,6 +38,18 @@ So thanks horizons for this oportunity because genuinely speaking I wouldnt even
 ### Market
 ![Market](images/Market.png)
 
+New Additions(11/06/2026)
+
+## Profile
+![Profile](images/profile.png)
+
+## Add Post
+![Add Post](images/addpost.png)
+
+## Orders
+![Orders](images/orders.png)
+
+
 ## Features
 - User Authentication
 - Product MarketPlace

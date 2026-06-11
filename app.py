@@ -24,6 +24,8 @@ class User(db.Model):
     name = db.Column(db.String(100), nullable=False)
     email =db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(200), nullable=False )
+    
+    posts = db.relationship("Post", backref="owner", lazy=True)
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
 
@@ -157,7 +159,9 @@ def shop():
     if "user" not in session:
         return redirect(url_for("signin"))
     user=User.query.filter_by(email=session["user"]).first()
-    return render_template("shop.html")
+
+    posts = Post.query.all()
+    return render_template("shop.html", user=user, posts=posts)
 
 if __name__ == "__main__":
    app.run(debug=True)
