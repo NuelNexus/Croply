@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Add Post
+    </title><body>
+    <form method="POST" enctype="multipart/form-data">
+        <input
+             type="text"
+             name="title"
+             placeholder="Product Name"
+             required
+        >
+
+        <input
+            type="number"
+            step="0.01"
+            name="price"
+            placeholder="Price"
+            required
+        >
+
+        <textarea
+            name="description"
+            placeholder="Description"
+        ></textarea>
+
+        <input
+            type="file"
+            name="image"
+            accept="image/*"
+            required
+        >
+
+        <button type="submit">
+            Post Product
+        </button>
+    </form>
+</body>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif
+        }
+        body{
+            font-family:'Fjalla One', sans-serif;
+            background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg?q=80&w=1974&fit=crop");
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:30px;
+        }
+        .add-post-card{
+            width:100%;
+            max-width:650px;
+            background:#f8f4e5;
+            padding:50px;
+            border-radius:20px;
+            box-shadow:
+               15px 15px 1px #4caf50,
+               15px 15px 2px black;
+        }
+        input,
+        textarea{
+            display:block;
+            font-family:'Fjalla One', sans-serif;
+            margin-bottom:25px;
+            border:none;
+            border-bottom:4px solid black;
+            width:100%;
+            padding:14px;
+            border-radius:12px;
+            outline:none;
+            font-size:15px;
+            background:#f8f4e5;
+        }
+        input:focus,
+        textarea:focus{
+            border-color:#4caf50;
+        }
+        textarea{
+            min-height:120px;
+            resize:vertical;
+        }
+        .upload-box{
+            border:3px dashed #4caf50;
+            margin-bottom:25px;
+            padding:25px;
+            text-align:center;
+            background:#f8fff8;
+        }
+        .upload-box input{
+            border:none;
+            padding:0;
+            margin:0;
+        }
+
+        .button{
+            width:100%;
+            padding:15px;
+            border:none;
+            border-radius:12px;
+            background: #4caf50;
+            color:white;
+            font-size:18px;
+            cursor:pointer;
+            transition:.2s;
+            display:block;
+            font-family:'Fjalla One', sans-serif;
+            letter-spacing:1px;
+
+            box-shadow:
+                4px 4px 1px #95a4ff;
+                4px 4px 1px 2px black;
+        }
+        .button:hover{
+            background:black;
+            color:white;
+            transform:translateY(-2px);
+        }
+        ::selection{
+            background:#ffc8ff;
+        }
+    </style>
+</html>
