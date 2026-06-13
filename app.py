@@ -37,6 +37,15 @@ class Post(db.Model):
 
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
 
+class Blog(db.Model):
+    id= db.Column(db.Integer, primary_key=True)
+
+    title = db.Column(db.String(150), nullable=False)
+    content = db.Column(db.Text, nullable=False)
+    image = db.Column(db.String(300))
+
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+
 with app.app_context():
     db.create_all()
 
@@ -162,6 +171,64 @@ def shop():
 
     posts = Post.query.all()
     return render_template("shop.html", user=user, posts=posts)
+
+@app.route("/message")
+def message():
+    if "user" not in session:
+        return redirect(url_for("signin"))
+    user = User.query.filter_by(email=session["user"]).first()
+    return render_template("message.html")
+
+@app.route("/blog")
+def blog():
+    if "user" not in session:
+        return redirect(url_for("signin"))
+    user = User.query.filter_by(email=session["user"]).first()
+
+    blogs = Blog.query.order_by(Blog.id.desc()).all()
+
+    return render_template(
+        "blog.html",
+        user=user,
+        blogs=blogs
+    )
+
+@app.route("/add_blog", methods=["GET", "POST"])
+def add_blog():
+    if "user" not in session:
+        return redirect(url_for("signin"))
+    
+    user = User.query.filter_by(email=session["user"]).first()
+
+    if request.method == "POST":
+       title = request.form.get("title")
+       content = request.form.get("content")
+
+       image_file = request.files.get("image")
+
+       filename = None
+
+       if image_file and image_file.filename:
+        filename = secure_filename(image_file.filename)
+
+        image_file.save(
+            os.path.join(app.config["UPLOAD_FOLDER"], filename)
+        )
+
+
+        new_blog = Blog(
+            title=title,
+            content= content,
+            image=filename,
+            user_id=user.id
+        )
+
+        db.session.add(new_blog)
+        db.session.commit()
+
+       return redirect(url_for("blog"))
+
+    return render_template("add_blog.html")
 
 if __name__ == "__main__":
    app.run(debug=True)

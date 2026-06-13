@@ -1,0 +1,55 @@
+<div id="player-container">
+    <div id="player">
+
+        <div id="player-track">
+            <div id="album-name"></div>
+            <div id="track-name"></div>
+
+            <div id="track-time">
+                <span id="current-time">00:00</span>
+                <span id="track-length">00:00</span>
+            </div>
+
+            <div id="seek-bar-container">
+                <div id="seek-bar"></div>
+            </div>
+        </div>
+
+        <div id="player-content">
+
+            <div id="album-art">
+                <img id="album-image"
+                     src="https://singhimalaya.github.io/Codepen/assets/img/album-arts/1.jpg"
+                     alt="Album Art">
+            </div>
+
+            <div id="player-controls">
+
+                <button id="play-previous">
+                    <i class="fas fa-backward"></i>
+                </button>
+
+                <button id="play-pause-button">
+                    <i class="fas fa-play"></i>
+                </button>
+
+                <button id="play-next">
+                    <i class="fas fa-forward"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/music.css') }}">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="{{ url_for('static', filename='js/music.js') }}"></script>
