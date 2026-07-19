@@ -101,3 +101,6 @@ croply/
 ├── app.py
 └── requirements.txt
 ```
+*** Important ***
+Ai was used in debuging and checking for errors
+I wanted to finish this project quickly
