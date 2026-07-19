@@ -10,42 +10,24 @@
           <body>
     <div class="blog-slider">
   <div class="blog-slider__wrp swiper-wrapper">
+    {% for blog in blogs %}
     <div class="blog-slider__item swiper-slide">
       <div class="blog-slider__img">
         
-        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+        {% if blog.image %}
+        <img src="{{ url_for('static', filename='uploads/' + blog.image) }}" alt="{{ blog.title }}">
+        {% else %}
+        <img src="https://via.placeholder.com/300x300?text=No+Image" alt="No Image">
+        {% endif %}
       </div>
       <div class="blog-slider__content">
-        <span class="blog-slider__code">26 December 2019</span>
-        <div class="blog-slider__title">Lorem Ipsum Dolor</div>
-        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
-        <a href="#" class="blog-slider__button">READ MORE</a>
+        <span class="blog-slider__code">Blog #{{ blog.id }}</span>
+        <div class="blog-slider__title">{{ blog.title }}</div>
+        <div class="blog-slider__text">{{ blog.content[:200] }}...</div>
+        <a href="{{ url_for('view_blog', blog_id=blog.id) }}" class="blog-slider__button">READ MORE</a>
       </div>
     </div>
-    <div class="blog-slider__item swiper-slide">
-      <div class="blog-slider__img">
-        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp" alt="">
-      </div>
-      <div class="blog-slider__content">
-        <span class="blog-slider__code">26 December 2019</span>
-        <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
-        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-        <a href="#" class="blog-slider__button">READ MORE</a>
-      </div>
-    </div>
-    
-    <div class="blog-slider__item swiper-slide">
-      <div class="blog-slider__img">
-        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp" alt="">
-      </div>
-      <div class="blog-slider__content">
-        <span class="blog-slider__code">26 December 2019</span>
-        <div class="blog-slider__title">Lorem Ipsum Dolor</div>
-        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-        <a href="#" class="blog-slider__button">READ MORE</a>
-      </div>
-    </div>
-    
+    {% endfor %}
   </div>
   <div class="blog-slider__pagination"></div>
 </div>

@@ -230,5 +230,17 @@ def add_blog():
 
     return render_template("add_blog.html")
 
+@app.route("/blog/<int:blog_id>")
+def view_blog(blog_id):
+    if "user" not in session:
+        return redirect(url_for("signin"))
+    
+    blog = Blog.query.get_or_404(blog_id)
+
+    return render_template(
+        "view_blog.html",
+        blog=blog
+    )
+
 if __name__ == "__main__":
    app.run(debug=True)

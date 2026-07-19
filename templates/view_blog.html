@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {{ blog.title}}
+        </title>
+    </head>
+    <body>
+        <h1>{{blog.title}}</h1>
+
+        {% if blog.image %}
+        <img src="{{ url_for('static', filename='uploads/' + blog.image) }}" width="500">
+        {% endif %}
+
+        <p>{{ blog.content}}</p>
+        <a href="{{ url_for('blog') }}">Back to Blogs</a>
+    </body>
+</html>
