@@ -1,6 +1,6 @@
 <h2>CROPLY SIGN IN</h2>
 <link rel="shortcut icon" href="https://i.postimg.cc/W4h337LG/Chat-GPT-Image-Jun-8-2026-07-43-05-AM.png" type="image/x-icon" width="100">
-<div class="container" id="container">
+<div class="container right-panel-active" id="container">
 	<div class="form-container sign-up-container">
 		<form action="/register" method="POST">
 			<h1>Create Account</h1>
@@ -294,16 +294,8 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }</style>
-<script>const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
-
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
+<script>document.getElementById('signIn').addEventListener('click', () => {
+	window.location.href = "/signin";
 });</script>
 			</div>
 		</div>
